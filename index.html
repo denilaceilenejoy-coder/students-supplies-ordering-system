@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Supplies Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Sections">
+  <div class="nav-inner">
+    <div class="brand">Campus Supplies Shop</div>
+    <ul>
+      <li><a href="#products" data-nav>Product List</a></li>
+      <li><a href="#cart" data-nav>Shopping Cart<span class="badge" id="navCount">0</span></a></li>
+      <li><a href="#summary" data-nav>Order Summary</a></li>
+      <li><a href="#payment" data-nav>Payment</a></li>
+      <li><a href="#receipt" data-nav>Receipt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" aria-label="Welcome">
+    <h1>School supplies, ready when you are.</h1>
+    <p>Pick what you need, check your cart, pay in cash, and get your receipt.</p>
+  </section>
+
+  <section id="products">
+    <div class="sec-head"><h2>1. Product List</h2><p>Prices are per piece.</p></div>
+    <div class="products" id="productGrid"></div>
+  </section>
+
+  <div class="work">
+    <section id="cart">
+      <div class="sec-head"><h2>2. Shopping Cart</h2><p id="cartHint"></p></div>
+      <div id="cartBody"></div>
+    </section>
+
+    <div class="col">
+      <section id="summary">
+        <div class="sec-head"><h2>3. Order Summary</h2></div>
+        <div id="summaryBody"></div>
+      </section>
+
+      <section id="payment">
+        <div class="sec-head"><h2>4. Payment</h2><p>Cash only</p></div>
+        <form id="payForm" novalidate>
+          <div class="total-row" style="margin-bottom:14px"><span>Amount due</span><span class="mono" id="dueAmt">₱0.00</span></div>
+          <label for="paid">Amount paid</label>
+          <div class="field" id="paidField"><span>₱</span><input id="paid" type="text" inputmode="decimal" autocomplete="off" placeholder="0.00"></div>
+          <div class="error" id="payError" role="alert" hidden></div>
+          <div class="pay-actions"><button class="btn" type="submit" id="confirmBtn">Confirm Payment</button></div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <section id="receipt">
+    <div class="sec-head"><h2>5. Receipt</h2></div>
+    <div id="receiptBody"></div>
+  </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
