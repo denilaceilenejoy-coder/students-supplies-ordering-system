@@ -127,7 +127,7 @@
 
     // Cart
     if (!ls.length) {
-      $('cartBody').innerHTML = '<div class="empty">Your cart is empty. Add something from the Product List.</div>';
+      $('cartBody').innerHTML = '<div class="empty">Your cart is empty. Add products from the Product List.</div>';
     } else {
       $('cartBody').innerHTML = '<div class="table-wrap"><table><thead><tr><th>Product</th><th class="num">Price</th><th>Quantity</th><th class="num">Subtotal</th><th></th></tr></thead><tbody>' +
         ls.map(function (l) {
